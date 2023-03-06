@@ -21,6 +21,10 @@ function App() {
         {
           path: '/aboutus',
           element: <AboutUS />,
+        },
+        {
+          path: '/aboutus',
+          element: <AboutUS />,
         }
       ]
     }
