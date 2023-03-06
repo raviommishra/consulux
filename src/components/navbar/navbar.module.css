@@ -1,0 +1,99 @@
+.rootComponent {
+  background-color: var(--navbar-bg-color);
+  padding: 5px;
+  position: sticky;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+}
+img {
+    object-fit: cover;
+}
+
+nav ul li {
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  max-width: 10rem;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  color: var(--white-color);
+  font: 400 20px "Poppins";
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  outline: none;
+  color: var(--navbar-title-bg);
+}
+
+.navbarComponent {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 5%;
+   position: sticky;
+   transform: all 0.5s;
+}
+
+.menuIcon {
+    color: var(--white-color);
+    font-size: 30px;
+}
+
+.navbarItemsComponent {
+    background-color: var(--navbar-bg-color);
+    transition: all 0.5s;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+}
+
+.navbarItemsComponent ul {
+    padding: 5px;
+}
+
+.navbarItemsComponent ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbarItemsComponent ul li a {
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    color: var(--white-color);
+    font: 400 20px "Poppins";
+    transition: all 0.3s;
+  }
+  
+  .navbarItemsComponent  nav ul li a:hover {
+    outline: none;
+    color: var(--navbar-title-bg);
+  }
+
+@media screen and (max-width: 768px){
+    nav ul li a {
+        font: 400 15px "Poppins";
+      }
+}
+
+@media screen and (max-width: 1000px){
+    nav ul li a {
+        font-size: 200 12px "Poppins";
+      }
+}

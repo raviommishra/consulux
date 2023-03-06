@@ -1,0 +1,21 @@
+.component {
+  background-color: var(--navbar-bg-color);
+  padding: 2%;
+}
+
+.onewon {
+  text-decoration: none;
+  color: #ffffff;
+  outline: none;
+}
+
+.onewon:hover {
+  outline: none;
+  color: #ffffff;
+}
+
+.component > p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+}

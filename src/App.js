@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import 'rsuite/styles/index.less';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+
 import './App.css';
 
+import AppLayout from './AppLayout';
+import Home from './components/home';
+import AboutUS from './components/about-us';
+
 function App() {
+
+  const appRouter = createBrowserRouter([
+    {
+      path: '/',
+      element: <AppLayout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/aboutus',
+          element: <AboutUS />,
+        }
+      ]
+    }
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <RouterProvider  router={appRouter}/>
   );
 }
 
