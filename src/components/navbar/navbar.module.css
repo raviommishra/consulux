@@ -1,13 +1,24 @@
 .rootComponent {
   background-color: var(--navbar-bg-color);
   padding: 5px;
-  position: sticky;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
+}
+
+.isSticky {
+  background-color: var(--navbar-bg-color);
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: sticky;
 }
 
 nav ul {

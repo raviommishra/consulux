@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 
@@ -34,13 +34,34 @@ const NAV_ITEMS = [
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
   const isMobile = useMedia(600);
 
   const handleNavbarClose = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
 
-  const handleNavbarMenuIcon = () => handleNavbarClose()
+ 
+
+  const handleNavbarMenuIcon = () => handleNavbarClose();
+
+  // TODO: tomorrow
+  const handleScrollingListener = () => {
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    if (window.pageYOffset >= sticky) {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  }
+
+  useEffect(() => {
+
+    const listner = window.addEventListener('scroll',handleScrollingListener);
+
+    return () => window.removeEventListener('scroll', listner);
+  }, [])
 
   const WebComponent = () => {
     return (
@@ -107,7 +128,7 @@ const Navbar = () => {
     );
   };
   return (
-    <div className={navbarStyles.rootComponent}>
+    <div id="navbar" className={isScrolling ? [navbarStyles.rootComponent, navbarStyles.isSticky] : navbarStyles.rootComponent}>
       {!isMobile ? <WebComponent /> : <MobileComponent />}
     </div>
   );
