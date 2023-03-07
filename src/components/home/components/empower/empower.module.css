@@ -1,0 +1,184 @@
+.root {
+  width: 70%;
+  margin: 3% auto;
+  padding: 10px;
+}
+
+.rootInnerComponent {
+  display: flex;
+}
+
+.rootInnerComponent > div:first-child {
+  flex: 0.3;
+}
+
+.titleComponent > h1 {
+  font-size: 2.5vmax;
+}
+
+.titleComponent > h1 > span {
+  font-family: "Roboto";
+  color: var(--navbar-bg-color);
+}
+
+.descriptionComponent {
+  margin: 15px 0;
+}
+
+.descriptionComponent > p {
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.buttonComponent {
+  width: 7vmax;
+  border-radius: 20px;
+  padding: 0.5vmax;
+  color: #ffffff;
+  border-width: 0px;
+  transition: all 0.5s;
+  background-color: #1f7ade;
+  cursor: pointer;
+  font: 500 0.9vmax "Roboto";
+}
+
+.buttonComponent:hover {
+  transform: scale(1.1);
+  background-color: var(--navbar-bg-color);
+}
+
+.mapImageComponent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 0.7;
+}
+
+.cardComponent {
+  margin: 7px;
+  width: 20vmax;
+  height: 15vmax;
+  position: relative;
+}
+.cardComponent > div:first-child > img {
+  width: 20vmax;
+  height: 15vmax;
+}
+
+.overlayComponent {
+  display: none;
+}
+
+.cardComponent:hover .overlayComponent {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(227, 246, 249, 0.8);
+  transition-delay: 0.7s;
+  transition: all 0.5s;
+  width: 20vmax;
+  height: 15vmax;
+  top: 0;
+  cursor: pointer;
+}
+
+.overlayComponent > div {
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.overlayComponent > div > p {
+  color: var(--navbar-bg-color);
+  font: 600 1.2vmax "Roboto";
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 5%;
+  margin-right: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .root {
+    width: 100%;
+    padding: 0;
+  }
+  .rootInnerComponent {
+    display: block;
+    padding: 10px;
+  }
+  .rootInnerComponent > div:first-child {
+    /* flex: 1; */
+  }
+  .titleComponent > h1 {
+    font-size: 3vmax;
+  }
+  .descriptionComponent {
+    margin: 15px 0;
+  }
+  .titleComponent {
+    margin-bottom: 5%;
+  }
+
+  .descriptionComponent > p {
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+  .mapImageComponent {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: scroll
+  }
+
+  .cardComponent:hover .overlayComponent {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(227, 246, 249, 0.8);
+    transition-delay: 0.7s;
+    transition: all 0.5s;
+    width: 23vmax;
+    height: 17vmax;
+    top: 0;
+    cursor: pointer;
+  }
+
+  .overlayComponent > div > p {
+    color: var(--navbar-bg-color);
+    font: 600 1.7vmax "Roboto";
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 5%;
+    margin-right: 5%;
+  }
+
+  .buttonComponent {
+    padding: 1vmax;
+    border-radius: 10px;
+    border-width: 0;
+    font: 400 2vmax "Roboto";
+    color: var(--white-color);
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .cardComponent {
+    margin-right: 5px;
+    width: 23vmax;
+    height: 17vmax;
+    position: relative;
+  }
+
+  .cardComponent > div:first-child > img {
+    width: 23vmax;
+    height: 17vmax;
+  }
+}

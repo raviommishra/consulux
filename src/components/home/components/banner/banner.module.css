@@ -1,88 +1,130 @@
 .rootComponent {
   background-color: #d0dfea;
   padding: 20px 6% 30px 6%;
- display: flex;
- flex: 1;
- justify-content: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 
 .innerComponent {
-    display: flex;
-    flex: 1;
-    align-items: center;
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
-.block_1_heading_component >h1 {
-    font-size: 3vmax;
+.block_1_heading_component > h1 {
+  font-size: 3vmax;
 }
 
 .block_1 {
-    display: flex;
-    flex: 0.5;
-    height: 60%;
-    justify-content: flex-end;
-    margin-top: -4%;
-    margin-right: 4%;
+  display: flex;
+  flex: 0.5;
+  height: 60%;
+  justify-content: flex-end;
+  margin-top: -4%;
+  margin-right: 4%;
 }
 
-
 .innerComponent > div:last-child > img {
-    width: 90%;
-    height: 60%;
+  width: 90%;
+  height: 60%;
 }
 
 .block_2 {
-    display: flex;
-    justify-content: flex-end;
-    flex: 0.5
+  display: flex;
+  justify-content: flex-end;
+  flex: 0.5;
 }
 
 .block_1_name_component {
-    display: flex;
-    align-items: flex-end;
-    flex: 1;
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
 }
 
 .block_1_name_component {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-    justify-content: space-between;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .block_1_heading_component p {
-    font: 400 1vmax "Monospace";
+  font: 400 1vmax "Monospace";
 }
 
 .block_1_heading_component > h1 > span {
-    color: #274585;
-    font-size: 5vmax;
-}
-
-@media screen and (max-width: 600px) {
-    .innerComponent {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-      }
+  color: #274585;
+  font-size: 5vmax;
 }
 
 .contactButton {
-    width: 7vmax;
-    border-radius: 20px;
-    padding: 0.5vmax;
-    color: #ffffff;
-    border-width: 0px;
-    transition: all 0.5s;
-    background-color:#1F7ADE;
-    cursor: pointer;
-    font: 500 0.9vmax "Roboto";
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  width: 7vmax;
+  border-radius: 20px;
+  padding: 0.5vmax;
+  color: #ffffff;
+  border-width: 0px;
+  transition: all 0.5s;
+  background-color: #1f7ade;
+  cursor: pointer;
+  font: 500 0.9vmax "Roboto";
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .contactButton:hover {
-    transform: scale(1.1);
-    font: 500 1vmax "Roboto";
+  transform: scale(1.1);
+  font: 500 1vmax "Roboto";
+}
+
+.mobileComponent {
+  position: relative;
+}
+
+.mobileImageComponent {
+}
+.mobileImageComponent > img {
+  width: 100%;
+}
+
+.mobileHeadingComponent {
+  z-index: 1;
+}
+
+.mobileHeadingComponent > h1 {
+  font-size: 4vmax;
+}
+
+.mobileHeadingComponent > p {
+  font-size: 2vmax;
+}
+
+.mobileHeadingComponent > h1 > span {
+  color: var(--navbar-bg-color);
+  font-size: 5vmax;
+}
+
+.mobileNameComponent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+
+.mobileContactButton {
+  background-color: var(--navbar-bg-color);
+  padding: 1vmax 2.5vmax;
+  border-width: 0px;
+  font: 300 2.5vmax "Roboto";
+  border-radius: 10px;
+  color: var(--white-color);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.mobileContactButton:hover {
+  transform: scale(1.1);
 }

@@ -1,17 +1,12 @@
 .rootComponent {
   background-color: var(--navbar-bg-color);
-  padding: 5px;
-  /* position: fixed;
-  top: 0;
-  width: 100%; */
+  padding: 2px;
+  border-bottom: 1px solid var(--navbar-bg-color);
 }
 
 .isSticky {
-  background-color: var(--navbar-bg-color);
-  padding: 5px;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  background-color: var(--white-color);
+  padding: 2px;
 }
 
 nav {
@@ -26,6 +21,24 @@ nav ul {
 }
 img {
     object-fit: cover;
+}
+
+.isSticky nav ul li {
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  max-width: 10rem;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+.isSticky nav ul li a {
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  color: var(--navbar-bg-color);
+  font: 700 20px "Poppins";
+  transition: all 0.3s;
 }
 
 nav ul li {

@@ -1,0 +1,93 @@
+.root {
+  width: 70%;
+  margin: 3% auto;
+  padding: 3px;
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.root > img {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.mystoryright {
+  background: #2b2b2b;
+  padding: 5%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.mystoryright h1 {
+  color: #dfdfdf;
+  font-size: 20px;
+}
+
+.mystoryright > h1 > span {
+  font: 700 3vmax "Roboto";
+  color: var(--white-color);
+}
+.mystoryright p {
+  color: #e3f6f9;
+  line-height: 1.5;
+}
+
+.underline {
+  background-color: #ffffff;
+  height: 2px;
+  width: 10%;
+}
+
+.descriptionComponent {
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.sign {
+  font-size: 1.5vmax;
+  font-family: font6, font6abc, cursive;
+}
+
+.name {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.descriptionComponent > p > a {
+  color: var(--navbar-title-bg);
+  outline: none;
+  text-decoration: none;
+}
+.descriptionComponent > a:hover {
+  outline: none;
+}
+
+.imageComponent {
+  width: 400px;
+}
+
+.imageComponent > img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .root {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px;
+    margin-top: 7%;
+    border: 0;
+  }
+
+  .imageComponent {
+    height: 400px;
+  }
+  .mystoryright {
+    border-radius: 0;
+  }
+  .root > img {
+    width: 100%;
+    border-radius: 0;
+    height: 400px;
+  }
+}
