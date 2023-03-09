@@ -21,7 +21,7 @@ const NAV_ITEMS = [
   },
   {
     title: "Team",
-    path: "/",
+    path: "#team",
   },
   {
     title: "Consula Azanda",
@@ -79,9 +79,15 @@ const Navbar = () => {
           {NAV_ITEMS.map((item) => {
             return (
               <li key={item.title}>
-                <Link to={item.path} className={StyleSheet.title}>
-                  {item.title}
-                </Link>
+                {item.path !== "#team" ? (
+                  <Link to={item.path} className={StyleSheet.title}>
+                    {item.title}
+                  </Link>
+                ) : (
+                  <a href={item.path} className={StyleSheet.title}>
+                    {item.title}
+                  </a>
+                )}
               </li>
             );
           })}

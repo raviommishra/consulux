@@ -11,7 +11,7 @@ const Home = () => {
     <div className={homeStyle.rootComponent}>
       <Banner />
       <Empowers />
-      <OurTeam />
+     <OurTeam />
       <Mystory />
 
     </div>

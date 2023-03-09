@@ -1,0 +1,18 @@
+
+  
+  .rootComponent {
+    width: 100vw;
+    height: 50vmax;
+    overflow: hidden;
+  }
+
+  #background {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }

@@ -1,5 +1,5 @@
 .rootComponent {
-  background-color: #d0dfea;
+  background-color: var(--background-color);
   padding: 20px 6% 30px 6%;
   display: flex;
   flex: 1;
