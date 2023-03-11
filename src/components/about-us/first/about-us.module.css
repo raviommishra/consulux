@@ -1,0 +1,87 @@
+
+  
+  .rootComponent {
+    width: 100vw;
+    height: 40vmax;
+    overflow: hidden;
+  }
+
+  #background {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .component {
+    padding: 10px;
+    align-items: center;
+    margin: auto;
+    margin-top: 3%;
+  }
+  
+  .introComponent {
+    flex: 1 1 1px;
+    align-self: flex-start;
+  }
+  
+  .description {
+    margin-top: 5%;
+  }
+  
+  .description > p {
+    font-size: 1.1vmax;
+    margin-top: 3%;
+    line-height: 1.5;
+  }
+  
+  .underline {
+    height: 3px;
+    background-color: #26a4bb;
+  }
+  
+  @media screen and (max-width: 900px){
+      .description > p {
+          font-size: 2vmax;
+          margin-top: 10%;
+          line-height: 1.5;
+        }
+  }
+  
+  @media screen and (min-width: 1000px) {
+    .component {
+      max-width: 70%;
+      display: flex;
+    }
+    .introComponent {
+      padding: 2%;
+      margin-left: 4%;
+    }
+  
+    .introComponent > h1 {
+      font-size: 2.5vmax;
+    }
+  }
+  
+  @media screen  and (max-width: 900px){
+      .leftComponent > img {
+          width: 25rem;
+      }
+  
+      .introComponent {
+          margin-top: 20px
+      }
+  }
+  
+  @media screen  and (max-width: 600px){
+      .leftComponent > img {
+          width: 100%;
+          height: 400px;
+          margin-left: -20px;
+      }
+  }
+  

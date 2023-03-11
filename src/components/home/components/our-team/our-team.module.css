@@ -8,7 +8,7 @@
   margin: 0 auto;
 }
 
-.innerComponent > h1 > span {
+.titleComponent > h1 > span {
   color: var(--navbar-bg-color);
 }
 
@@ -21,7 +21,7 @@
 
 .mapCardComponent {
   display: flex;
-  flex-directin: row;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -105,21 +105,48 @@
 }
 
 @media screen and (max-width: 600px) {
-  .mapCardComponent {
+  .root {
+    padding-bottom: 20px;
+  }
+  .mobileMapCardComponent {
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-grow: 1; */
     overflow-x: scroll;
-    padding: 0 20px 0 75%;
+    /* padding: 0 20px 0 75%; */
+    
+    
+  }
+
+  .titleComponent {
+    padding: 10px;
   }
 
   .innerComponent {
     width: 100%;
+    padding: 0px;
   }
 
   .descriptionComponent > p,
   .name {
     text-align: center;
     font: 600 2vmax "Roboto";
+  }
+
+  .underline {
+    width: 50%
+  }
+
+  .imageComponent {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border: 10px solid #f7f7f7;
+  }
+
+  .readMore {
+    padding: 1vmax 3vmax;
+    font: 400 15px "Poppins"
   }
 
   .card_style {

@@ -1,11 +1,58 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IoLogoLinkedin } from "react-icons/io5";
+
 import styles from "./my-story.module.css";
+import { useMedia } from "../../../../helper/usemedia";
 const Mystory = () => {
+  const isMobile = useMedia(600);
+
+  if (isMobile) {
+    return (
+      <div className={styles.mobileComponent}>
+        <div className={styles.mobileInnerComponent}>
+          <div className={styles.mobileImageComponent}>
+            <img src="/images/monica.jpg" alt="founder logo" />
+          </div>
+          <div className={styles.mystoryright}>
+            <h1>
+              <span>La</span> mia storia…
+            </h1>
+            <div className={styles.underline} />
+            <div className={styles.descriptionComponent}>
+              <p>
+                …come andare sulla montagna russa!
+                <br />
+                Già i tempi delle scuole sono stati molto movimentati: 3 anni di
+                superiori in Calabria e gli ultimi 2 a Milano.
+                <br />
+                Considerando il cambio di mentalità, compagni, professori,
+                <Link to="/" style={{ marginLeft: 5 }}>
+                  Read more ....
+                </Link>
+              </p>
+            </div>
+            <p className={styles.sign}>Monica</p>
+            <a
+              href="https://www.linkedin.com/in/monica-dominijanni-4b3a1970"
+              target="_blank"
+              className={styles.linkedin}
+            >
+              <IoLogoLinkedin
+                color="#fff"
+                size={25}
+                style={{ marginTop: 10, textAlign: "center" }}
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className={styles.root}>
-        <img src="/images/monica.jpg" alt="founder logo" />
-      <div className={styles.mystoryright} >
+      <img src="/images/monica.jpg" alt="founder logo" />
+      <div className={styles.mystoryright}>
         <h1>
           <span>La</span> mia storia…
         </h1>
@@ -31,8 +78,13 @@ const Mystory = () => {
             <Link to="/">Read more ....</Link>
           </p>
         </div>
-        <p className={styles.sign}>Monika</p>
-        <p className={styles.name}>- Monica</p>
+        <p className={styles.sign}>Monica</p>
+        <a
+          href="https://www.linkedin.com/in/monica-dominijanni-4b3a1970"
+          target="_blank"
+        >
+          <IoLogoLinkedin color="#fff" size={25} style={{ marginTop: 10 }} />
+        </a>
       </div>
     </div>
   );

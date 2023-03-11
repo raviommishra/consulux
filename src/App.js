@@ -6,6 +6,7 @@ import './App.css';
 import AppLayout from './AppLayout';
 import Home from './components/home';
 import AboutUS from './components/about-us';
+import Contact from './components/contact';
 
 function App() {
 
@@ -21,6 +22,10 @@ function App() {
         {
           path: '/aboutus',
           element: <AboutUS />,
+        },
+        {
+          path: '/contact',
+          element: <Contact />,
         },
       ]
     }

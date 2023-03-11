@@ -70,6 +70,32 @@
   height: 100%;
 }
 
+.mobileComponent {
+  padding: 10px;
+  margin: 2% auto;
+}
+.mobileInnerComponent {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mobileImageComponent {
+  width: 100%;
+  height: 250px;
+}
+
+.mobileImageComponent > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 @media screen and (max-width: 600px) {
   .root {
     width: 100%;
@@ -84,6 +110,9 @@
   }
   .mystoryright {
     border-radius: 0;
+  }
+  .sign {
+    text-align: right;
   }
   .root > img {
     width: 100%;

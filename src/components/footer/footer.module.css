@@ -1,6 +1,9 @@
 .component {
   background-color: var(--navbar-bg-color);
-  padding: 2%;
+  padding: 2% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .onewon {
@@ -14,8 +17,37 @@
   color: #ffffff;
 }
 
-.component > p {
+.component > div:last-child > p >span {
+  color : #E3F6F9
+}
+
+.component > div:first-child > p , .component > div:last-child > p {
   color: #ffffff;
   text-align: center;
   font-size: 20px;
+}
+
+.component > div:last-child > p:first-child {
+  text-align: left;
+}
+
+.verticalLine {
+  display: none;
+}
+
+@media screen and (max-width: 600px) { 
+  .component {
+    padding: 3% 5% 3% 3%;
+  }
+  .component > div:first-child > p , .component > div:last-child > p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+  }
+  .verticalLine {
+    width: 2px;
+    height: 20px;
+    background-color: #fff;
+    display: block;
+  }
 }

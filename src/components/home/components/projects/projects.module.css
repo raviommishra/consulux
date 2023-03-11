@@ -1,0 +1,83 @@
+.rootComponent {
+    width: 70%;
+    margin: auto;
+}
+
+.innerComponent {
+ padding: 10px;
+}
+
+.underline {
+    width: 40%;
+    height: 2px;
+    background-color: var(--navbar-bg-color);
+    margin-top: 5px;
+}
+
+.mapComponent {
+    margin: 3% auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardComponent {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 3px 3px #e5e5e5;
+}
+.cardComponent:hover {
+    opacity: 0.5;
+}
+
+.cardComponent > a {
+    outline: none;
+    text-decoration: none;
+   
+}
+.cardComponent > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobileMapComponent {
+    display: flex;
+    /* flex-grow: 1; */
+    overflow-x: scroll;
+    margin: 5% 0 1% 0;
+}
+
+.mobileCardComponent {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+   box-shadow: 3px 3px #e5e5e5;
+}
+
+.mobileCardComponent > a > img {
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .rootComponent {
+        width: 100%;
+        margin: 8% 0;
+    }
+    .cardComponent {
+        width: 100%;
+        height: 300px;
+        margin: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .underline {
+        width: 90%;
+    }
+}

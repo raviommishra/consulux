@@ -4,6 +4,7 @@ import Empowers from './components/empower';
 import homeStyle from './home.module.css';
 import Mystory from './components/my-story';
 import OurTeam from './components/our-team';
+import Projects from './components/projects';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
      <OurTeam />
       <Mystory />
 
+      <Projects />
     </div>
   )
 }

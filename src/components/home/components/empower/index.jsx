@@ -5,19 +5,13 @@ import styles from "./empower.module.css";
 const detail = [
   {
     url: "/images/a-4.jpg",
-    text: "From Idea to Implementation",
+    text: "Business Central sul Dispositivo mobile",
+    targetUrl: "https://www.youtube.com/watch?v=Zv8EjzpqpMs",
   },
   {
     url: "/images/b-4.jpg",
-    text: "The Digital Statement",
-  },
-  {
-    url: "/images/c-4.jpg",
-    text: "The Team that Delivers Results",
-  },
-  {
-    url: "/images/d-4.jpg",
-    text: "We touch your life in more ways!",
+    text: "E-commerce: come scegliere un professionista",
+    targetUrl: "/",
   },
 ];
 
@@ -30,7 +24,11 @@ const Empowers = () => {
         </div>
         <div className={styles.overlayComponent}>
           <div>
-            <p>{item.text}</p>
+            <p>
+              <a href={item.targetUrl} target="_blank" rel="noreferrer">
+                {item.text}
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -42,13 +40,18 @@ const Empowers = () => {
       <div className={styles.rootInnerComponent}>
         <div className={styles.titleComponent}>
           <h1>
-            <span>Consultancy</span> that empowers you...
+            Oltre il software: quando è necessaria una{" "}
+            <span>Consulenza ERP?</span>
           </h1>
           <div className={styles.descriptionComponent}>
             <p>
-              Unlike other Frameworks which try to cover everything, It has been
-              built specifically for wordpress. Aliquam sapien est, scelerisque
-              sed dolor. Proin accumsan erat sem, id porta risus dignissim ac...
+              La consulenza legata all’implementazione di un nuovo sistema
+              gestionale ERP è strategica.
+              <br />
+              <p>
+                Il sistema ERP non può infatti essere implementato senza
+                prevedere anche un aggiornamento dei processi aziendali.{" "}
+              </p>
             </p>
           </div>
           <button className={styles.buttonComponent}>Read more</button>

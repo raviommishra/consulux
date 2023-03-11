@@ -5,7 +5,7 @@ import { useMedia } from "../../../../helper/usemedia";
 import styles from "./banner.module.css";
 
 const Banner = () => {
-  const isMobile = useMedia(600);
+  const isMobile = useMedia(1000);
 
   const WebComponent = () => {
     return (
@@ -17,33 +17,39 @@ const Banner = () => {
                 <span>
                   <b>C</b>
                 </span>
-                onsulenza{" "}
+                ONSULENZA{" "}
                 <span>
                   <b>A</b>
                 </span>
-                ziendale
+                ZIENDALE
               </h1>
-              <p>E-commerce: come scegliere un professionista</p>
+              <p className={styles.andText}>E</p>
+              <h1>
+                <span>S</span>OLUZIONI <span>D</span>IGITALI
+              </h1>
+              <p>Progettare e Comunicare</p>
             </div>
             <div className={styles.block_1_name_component}>
-              <div>
-                <p>Monica Dominijanni</p>
-                <p>
-                  <span>
-                    <b>Partita IVA:</b>
-                  </span>{" "}
-                  03918000120
-                </p>
-              </div>
-              <div>
-                <button className={styles.contactButton}>
-                  Contact{" "}
-                  <IoArrowForwardOutline
-                    color="#fff"
-                    size={18}
-                    style={{ marginLeft: 10 }}
-                  />
-                </button>
+              <div className={styles.block_1_name_inner_component}>
+                <div>
+                  <p>Monica Dominijanni</p>
+                  <p>
+                    <span>
+                      <b>Partita IVA:</b>
+                    </span>{" "}
+                    03918000120
+                  </p>
+                </div>
+                <div>
+                  <button className={styles.contactButton}>
+                    Contatti{" "}
+                    <IoArrowForwardOutline
+                      color="#fff"
+                      size={18}
+                      style={{ marginLeft: 10 }}
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -58,43 +64,47 @@ const Banner = () => {
   const MobileComponent = () => {
     return (
       <div className={styles.mobileComponent}>
-      <div className={styles.mobileHeadingComponent}>
-              <h1>
-                <span>
-                  <b>C</b>
-                </span>
-                onsulenza{" "}
-                <span>
-                  <b>A</b>
-                </span>
-                ziendale
-              </h1>
-              <p>E-commerce: come scegliere un professionista</p>
-            </div>
+        <div className={styles.mobileHeadingComponent}>
+          <h1>
+            <span>
+              <b>C</b>
+            </span>
+            ONSULENZA{" "}
+            <span>
+              <b>A</b>
+            </span>
+            ZIENDALE
+          </h1>
+          <p className={styles.andText}>E</p>
+          <h1>
+            <span>S</span>OLUZIONI <span>D</span>IGITALI
+          </h1>
+          <p>Progettare e Comunicare</p>
+        </div>
         <div className={styles.mobileImageComponent}>
           <img src="/images/banner-1.png" alt="business consultency banner" />
         </div>
         <div className={styles.mobileNameComponent}>
-              <div>
-                <p>Monica Dominijanni</p>
-                <p>
-                  <span>
-                    <b>Partita IVA:</b>
-                  </span>{" "}
-                  03918000120
-                </p>
-              </div>
-              <div>
-                <button className={styles.mobileContactButton}>
-                  Contact{" "}
-                  <IoArrowForwardOutline
-                    color="#fff"
-                    size={15}
-                    style={{ marginLeft: 10 }}
-                  />
-                </button>
-              </div>
-            </div>
+          <div>
+            <p>Monica Dominijanni</p>
+            <p>
+              <span>
+                <b>Partita IVA:</b>
+              </span>{" "}
+              03918000120
+            </p>
+          </div>
+          <div>
+            <button className={styles.mobileContactButton}>
+              Contatti{" "}
+              <IoArrowForwardOutline
+                color="#fff"
+                size={15}
+                style={{ marginLeft: 10 }}
+              />
+            </button>
+          </div>
+        </div>
       </div>
     );
   };

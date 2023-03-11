@@ -58,16 +58,18 @@
 .cardComponent {
   margin: 7px;
   width: 20vmax;
-  height: 15vmax;
+  height: 20vmax;
   position: relative;
 }
 .cardComponent > div:first-child > img {
   width: 20vmax;
-  height: 15vmax;
+  height: 20vmax;
 }
 
 .overlayComponent {
   display: none;
+  outline: none;
+  text-decoration: none;
 }
 
 .cardComponent:hover .overlayComponent {
@@ -78,7 +80,7 @@
   transition-delay: 0.7s;
   transition: all 0.5s;
   width: 20vmax;
-  height: 15vmax;
+  height: 20vmax;
   top: 0;
   cursor: pointer;
 }
@@ -91,19 +93,23 @@
   height: 100%;
 }
 
-.overlayComponent > div > p {
+.overlayComponent > div > p > a {
   color: var(--navbar-bg-color);
   font: 600 1.2vmax "Roboto";
   align-items: flex-end;
   justify-content: flex-end;
+  display: flex;
   margin-bottom: 5%;
-  margin-right: 5%;
+  margin-left: 5%;
+  text-decoration: none;
+  outline: none;
 }
 
 @media screen and (max-width: 600px) {
   .root {
     width: 100%;
     padding: 0;
+    margin: 8% 0;
   }
   .rootInnerComponent {
     display: block;
@@ -120,6 +126,7 @@
   }
   .titleComponent {
     margin-bottom: 5%;
+    padding: 5px;
   }
 
   .descriptionComponent > p {
@@ -132,7 +139,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;
-    overflow: scroll
+    overflow: scroll;
   }
 
   .cardComponent:hover .overlayComponent {
@@ -142,24 +149,26 @@
     background-color: rgba(227, 246, 249, 0.8);
     transition-delay: 0.7s;
     transition: all 0.5s;
-    width: 23vmax;
-    height: 17vmax;
+    width: 25vmax;
+    height: 20vmax;
     top: 0;
     cursor: pointer;
   }
 
-  .overlayComponent > div > p {
+  .overlayComponent > div > p > a {
     color: var(--navbar-bg-color);
     font: 600 1.7vmax "Roboto";
     align-items: flex-end;
     justify-content: flex-end;
     margin-bottom: 5%;
-    margin-right: 5%;
+    margin-left: 5%;
+    text-decoration: none;
+    outline: none;
   }
 
   .buttonComponent {
-    padding: 1vmax;
-    border-radius: 10px;
+    padding: 1.5vmax 1vmax;
+    border-radius: 25px;
     border-width: 0;
     font: 400 2vmax "Roboto";
     color: var(--white-color);
@@ -167,18 +176,18 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 6% auto auto auto;
   }
 
   .cardComponent {
-    margin-right: 5px;
-    width: 23vmax;
-    height: 17vmax;
+    margin-right: 2%;
+    width: 25vmax;
+    height: 20vmax;
     position: relative;
   }
 
   .cardComponent > div:first-child > img {
-    width: 23vmax;
-    height: 17vmax;
+    width: 25vmax;
+    height: 20vmax;
   }
 }

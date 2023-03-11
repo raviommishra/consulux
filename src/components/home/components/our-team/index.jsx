@@ -1,4 +1,5 @@
 import React from "react";
+import { useMedia } from "../../../../helper/usemedia";
 
 import styles from "./our-team.module.css";
 
@@ -21,14 +22,17 @@ const array = [
     }
 ]
 const OurTeam = () => {
+  const isMobile = useMedia(600);
   return (
     <div className={styles.root} id="team">
       <div className={styles.innerComponent}>
+      <div className={styles.titleComponent}>
         <h1>
-          <span>Our</span>&nbsp;Team
+          <span>Il</span>&nbsp;Team
         </h1>
         <div className={styles.underline} />
-        <div className={styles.mapCardComponent}>
+        </div>
+        <div className={isMobile ? styles.mobileMapCardComponent :styles.mapCardComponent}>
           {array.map((item, index) => {
             return (
               <div key={index} className={styles.card_style}>
@@ -38,7 +42,6 @@ const OurTeam = () => {
                   </div>
                   <div className={styles.descriptionComponent}>
                     <p className={styles.name}>{item.name}</p>
-                    <p>Web desiogner</p>
                   </div>
                 </div>
               </div>
@@ -46,7 +49,7 @@ const OurTeam = () => {
           })}
         </div>
         <div className={styles.buttonComponent}>
-        <button className={styles.readMore}>Read more</button>
+        <button className={styles.readMore}>Know more</button>
         </div>
       </div>
     </div>

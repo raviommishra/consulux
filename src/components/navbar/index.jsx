@@ -12,24 +12,24 @@ const NAV_ITEMS = [
     path: "/",
   },
   {
-    title: "Consulenze Bandi",
-    path: "/aboutus",
-  },
-  {
     title: "Shopify",
     path: "/",
   },
   {
-    title: "Team",
+    title: "Il Team",
     path: "#team",
   },
   {
-    title: "Consula Azanda",
+    title: "Consulenza aziendale",
     path: "/",
   },
   {
-    title: "Contact Us",
-    path: "/",
+    title: "Consulenze Bandi",
+    path: "/aboutus",
+  },
+  {
+    title: "Contattis",
+    path: "/contact",
   },
 ];
 
@@ -84,7 +84,11 @@ const Navbar = () => {
                     {item.title}
                   </Link>
                 ) : (
-                  <a href={item.path} className={StyleSheet.title}>
+                  <a
+                    href={item.path}
+                    rel="noreferrer"
+                    className={StyleSheet.title}
+                  >
                     {item.title}
                   </a>
                 )}
@@ -124,9 +128,19 @@ const Navbar = () => {
               {NAV_ITEMS.map((item) => {
                 return (
                   <li key={item.title}>
-                    <Link to={item.path} className={StyleSheet.title}>
-                      {item.title}
-                    </Link>
+                    {item.path !== "#team" ? (
+                      <Link to={item.path} className={StyleSheet.title}>
+                        {item.title}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.path}
+                        rel="noreferrer"
+                        className={StyleSheet.title}
+                      >
+                        {item.title}
+                      </a>
+                    )}
                   </li>
                 );
               })}
