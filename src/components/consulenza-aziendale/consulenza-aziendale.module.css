@@ -1,0 +1,111 @@
+.bannerComponent {
+    padding: 3%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.descriptionComponent {
+    width: 70%;
+    margin: 5% auto;
+}
+
+.descriptionComponent p , .descriptionComponent li {
+    font-size:18px;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.banner_text {
+    flex: 0.4;
+}
+
+.banner_text h1 span {
+    color: var(--navbar-bg-color);
+    font: 600 2.7vmax "Roboto";
+}
+
+.contactButton {
+    background-color: var(--navbar-bg-color); 
+    padding: 7px 6%;
+    border-radius: 20px;
+    transition: all 0.5s;
+    outline: none;
+    border: 0;
+    font: 500 1vmax "Poppins";
+    color: var(--white-color);
+}
+
+.contactButton:hover {
+    /* transform: scale(1.1); */
+    background-color: var(--navbar-title-bg);
+    cursor: pointer
+}
+
+.bannerTextBottomComponent {
+    display: flex;
+    margin-top: 10%;
+}
+
+.rightComponent .imgComponent img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .bannerComponent {
+        padding: 6% 4%;
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner_text {
+        flex: 1;
+    }
+    .banner_text h1{
+        font: 600 3vmax "Roboto";
+    }
+    .banner_text h1 span {
+        color: var(--navbar-bg-color);
+        font: 600 3vmax "Roboto";
+    }
+    .rightComponent {
+        margin: 10% auto 0 auto;
+        flex: 1;
+    }
+    .bannerTextBottomComponent {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 3% 0;
+    }
+    .contactButton{
+        padding: 7px 6%;
+        border-radius: 20px;
+        transition: all 0.5s;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        outline: none;
+        border: 0;
+        font: 500 2vmax "Poppins";
+        color: var(--white-color);
+    }
+    .rightComponent .imgComponent img {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .descriptionComponent {
+        width: 100%;
+        margin: 5% auto;
+        padding: 5%;
+    }
+    .descriptionComponent p , .descriptionComponent li {
+        font-size: 18px;
+        word-break: break-all;
+        white-space: normal;
+    }
+}

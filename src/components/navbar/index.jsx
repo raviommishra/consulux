@@ -21,7 +21,7 @@ const NAV_ITEMS = [
   },
   {
     title: "Consulenza aziendale",
-    path: "/",
+    path: "/consulenza-aziendale",
   },
   {
     title: "Consulenze Bandi",

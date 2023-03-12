@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoLogoLinkedin } from "react-icons/io5";
+import { Modal } from "rsuite";
 
 import styles from "./my-story.module.css";
 import { useMedia } from "../../../../helper/usemedia";

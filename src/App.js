@@ -7,6 +7,7 @@ import AppLayout from './AppLayout';
 import Home from './components/home';
 import AboutUS from './components/about-us';
 import Contact from './components/contact';
+import ConsulenzaAziendale from './components/consulenza-aziendale';
 
 function App() {
 
@@ -26,6 +27,10 @@ function App() {
         {
           path: '/contact',
           element: <Contact />,
+        },
+        {
+          path: '/consulenza-aziendale',
+          element: <ConsulenzaAziendale />,
         },
       ]
     }

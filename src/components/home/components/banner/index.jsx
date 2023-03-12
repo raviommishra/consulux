@@ -1,11 +1,14 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom';
 import { IoArrowForwardOutline } from "react-icons/io5";
-import { useMedia } from "../../../../helper/usemedia";
 
+import { useMedia } from "../../../../helper/usemedia";
 import styles from "./banner.module.css";
 
 const Banner = () => {
   const isMobile = useMedia(1000);
+
+  const navigate = useNavigate();
 
   const WebComponent = () => {
     return (
@@ -41,7 +44,7 @@ const Banner = () => {
                   </p>
                 </div>
                 <div>
-                  <button className={styles.contactButton}>
+                  <button className={styles.contactButton} onClick={() => navigate('/contact')}>
                     Contatti{" "}
                     <IoArrowForwardOutline
                       color="#fff"
@@ -95,7 +98,7 @@ const Banner = () => {
             </p>
           </div>
           <div>
-            <button className={styles.mobileContactButton}>
+            <button className={styles.mobileContactButton} onClick={() => navigate('/contact')}>
               Contatti{" "}
               <IoArrowForwardOutline
                 color="#fff"
