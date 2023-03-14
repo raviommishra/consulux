@@ -63,7 +63,7 @@ const Contact = () => {
                 </li>
                 <li>
                   Anydesk
-                  <a href="https://anydesk.com/it" target="_blank">
+                  <a href="https://anydesk.com/it" target="_blank" rel="noreferrer">
                     <div className={styles.imgComponent}>
                       <img
                         src="/images/anydesk.png"
@@ -163,7 +163,7 @@ const Contact = () => {
             </li>
             <li>
               Anydesk
-              <a href="https://anydesk.com/it" target="_blank">
+              <a href="https://anydesk.com/it" target="_blank" rel="noreferrer">
                 <div className={styles.imgComponent}>
                   <img
                     src="/images/anydesk.png"

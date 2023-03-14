@@ -42,7 +42,7 @@ const Projects = () => {
         {data?.map((item, index) => {
           return (
             <div key={index} className={styles.mobileCardComponent}>
-              <a href={item.url} target="_blank">
+              <a href={item.url} target="_blank" rel="noreferrer">
                 <img src={item.imgUrl} alt="projects" />
               </a>
             </div>
@@ -52,7 +52,7 @@ const Projects = () => {
         {data?.map((item, index) => {
           return (
             <div key={index} className={styles.cardComponent}>
-              <a href={item.url} target="_blank">
+              <a href={item.url} target="_blank" rel="noreferrer">
                 <img src={item.imgUrl} alt="projects" />
               </a>
             </div>
