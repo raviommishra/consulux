@@ -317,3 +317,10 @@
     align-items: center;
   }
 }
+
+.calling_block > p > a {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: var(--navbar-title-bg);
+}

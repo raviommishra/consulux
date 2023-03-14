@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./contact.module.css";
 import { IoMailOpenOutline, IoCallOutline } from "react-icons/io5";
@@ -50,6 +51,7 @@ const Contact = () => {
                   <a
                     href="https://www.teamviewer.com/it/?utm_source=bing&utm_medium=cpc&utm_campaign=it%7Cb%7Cpr%7C21%7Csep%7Cexact-brand-only-sn%7Cfree%7Ct0%7C0&utm_content=exact_brand&utm_term=team%20viewer&msclkid=d00b9f3d517c15674353fb3646c69cd3"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <div className={styles.imgComponent}>
                       <img
@@ -63,7 +65,11 @@ const Contact = () => {
                 </li>
                 <li>
                   Anydesk
-                  <a href="https://anydesk.com/it" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://anydesk.com/it"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className={styles.imgComponent}>
                       <img
                         src="/images/anydesk.png"
@@ -75,10 +81,11 @@ const Contact = () => {
                   </a>
                 </li>
               </ol>
-              <p style={{marginTop: 50}}>
+              <p style={{ marginTop: 50 }}>
                 <span style={{ color: "red" }}>Nota : </span>L'utilizzo del
-                servizio prevede l'accettazione dei nostri termini e le
-                condizioni di utilizzo del software di assistenza remota
+                servizio prevede l'accettazione{" "}
+                <Link to="/terms-conditions"> dei nostri termini e le
+                condizioni di utilizzo del software di assistenza remota</Link>
               </p>
             </div>
           )}
@@ -150,6 +157,7 @@ const Contact = () => {
               <a
                 href="https://www.teamviewer.com/it/?utm_source=bing&utm_medium=cpc&utm_campaign=it%7Cb%7Cpr%7C21%7Csep%7Cexact-brand-only-sn%7Cfree%7Ct0%7C0&utm_content=exact_brand&utm_term=team%20viewer&msclkid=d00b9f3d517c15674353fb3646c69cd3"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className={styles.imgComponent}>
                   <img
@@ -175,10 +183,10 @@ const Contact = () => {
               </a>
             </li>
           </ol>
-          <p style={{marginTop: 20}}>
+          <p style={{ marginTop: 20 }}>
             <span style={{ color: "red" }}>Nota : </span>L'utilizzo del servizio
-            prevede l'accettazione dei nostri termini e le condizioni di
-            utilizzo del software di assistenza remota
+            prevede l'accettazione <Link to="/terms-conditions"> dei nostri termini e le condizioni di
+            utilizzo del software di assistenza remota</Link>
           </p>
         </div>
       )}
