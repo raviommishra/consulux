@@ -13,11 +13,11 @@ const NAV_ITEMS = [
   },
   {
     title: "Shopify",
-    path: "/",
+    path: "/shopify",
   },
   {
     title: "Il Team",
-    path: "#team",
+    path: "/#team",
   },
   {
     title: "Consulenza aziendale",
@@ -79,7 +79,7 @@ const Navbar = () => {
           {NAV_ITEMS.map((item) => {
             return (
               <li key={item.title}>
-                {item.path !== "#team" ? (
+                {!item.path.includes("#team") ? (
                   <Link to={item.path} className={StyleSheet.title}>
                     {item.title}
                   </Link>
@@ -128,7 +128,7 @@ const Navbar = () => {
               {NAV_ITEMS.map((item) => {
                 return (
                   <li key={item.title}>
-                    {item.path !== "#team" ? (
+                    {!item.path.includes("#team") ? (
                       <Link to={item.path} className={StyleSheet.title}>
                         {item.title}
                       </Link>

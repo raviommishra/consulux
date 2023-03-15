@@ -9,6 +9,7 @@ import AboutUS from './components/about-us';
 import Contact from './components/contact';
 import ConsulenzaAziendale from './components/consulenza-aziendale';
 import Termsconditions from './components/terms-conditions';
+import Shopify from './components/shopify';
 
 function App() {
 
@@ -37,6 +38,10 @@ function App() {
           path: '/terms-conditions',
           element: <Termsconditions />,
         },
+        {
+          path: '/shopify',
+          element: <Shopify />
+        }
       ]
     }
   ])
